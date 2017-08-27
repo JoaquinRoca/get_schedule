@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--These should be in time blocs, which could be another partial above-->
+<!--When one is chosen for a time bloc, the rest of those could be dismissed as well-->
+<!--Final one could be an add new time use-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/event_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp">
+
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/start_time_text"
+        android:textColor="@color/primaryColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/fullDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start"
+        android:text="@string/description_text"
+        android:textColor="@color/primaryColor" />
+
+
+    <Button
+        android:id="@+id/undo_button"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fullDescription"
+        android:layout_gravity="end|center_vertical"
+        android:text="@string/button_undo"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

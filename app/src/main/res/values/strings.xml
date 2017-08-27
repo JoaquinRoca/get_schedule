@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Get Schedule</string>
+    <string name="title_activity_show_agenda">ShowAgenda</string>
+    <string name="show_agenda_button">Show Agenda</string>
+    <string name="button_undo">Undo</string>
+    <string name="add_remove_directions">Swipe right to add an event, or swipe left to dismiss and see a new one.</string>
+    <string name="start_time_text">Start time</string>
+    <string name="description_text">Description</string>
+</resources>

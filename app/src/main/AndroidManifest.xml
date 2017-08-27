@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.joaquinroca.android.getschedule">
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/my_backup_rules">
+
+        <!--https://firebase.google.com/docs/app-indexing/android/app-->
+        <!--https://stackoverflow.com/a/34368811-->
+        <activity
+            android:name="com.joaquinroca.android.getschedule.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter android:label="@string/show_agenda_button">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https"
+                    android:host="joaquinroca.com"
+                    android:pathPrefix="/get_schedule" />
+
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".ShowAgenda"
+            android:label="@string/title_activity_show_agenda"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
